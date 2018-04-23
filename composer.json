@@ -27,7 +27,8 @@
         "elephantsgroup/eg-base": "~1",
         "elephantsgroup/eg-jdf": "~1",
         "elephantsgroup/eg-jdate": "~1",
-		"elephantsgroup/eg-user": "~1"
+		"elephantsgroup/eg-user": "~1",
+		"elephantsgroup/eg-stat": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*"
