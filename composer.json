@@ -28,8 +28,8 @@
         "elephantsgroup/eg-jdf": "~1",
         "elephantsgroup/eg-jdate": "~1",
 		"elephantsgroup/eg-user": "~1",
-        "elephantsgroup/eg-admin": "*",
-		"elephantsgroup/eg-stat": "*"
+        "elephantsgroup/eg-admin": "~1",
+		"elephantsgroup/eg-stat": "~1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*"
