@@ -5,3 +5,4 @@
 /src/console/runtime/*
 /vendor
 /composer.phar
+/admin/assets/*

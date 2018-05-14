@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf4eb149fc06f89c7a18719414089901",
+    "content-hash": "8852aa0bc52f3a31ebf6c41f62ee16be",
     "packages": [
+        {
+            "name": "bower-asset/bootstrap",
+            "version": "v3.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/0b9c4a4007c44201dce9a6cc1a38407005c26c86",
+                "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.9.1,<4.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "less/bootstrap.less",
+                    "dist/js/bootstrap.js"
+                ],
+                "bower-asset-ignore": [
+                    "/.*",
+                    "_config.yml",
+                    "CNAME",
+                    "composer.json",
+                    "CONTRIBUTING.md",
+                    "docs",
+                    "js/tests",
+                    "test-infra"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "keywords": [
+                "css",
+                "framework",
+                "front-end",
+                "js",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ]
+        },
         {
             "name": "bower-asset/inputmask",
             "version": "3.3.11",
@@ -427,7 +476,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-03-17T19:36:21+00:00"
+            "time": "2018-04-05T12:28:34+00:00"
         },
         {
             "name": "elephantsgroup/eg-jdf",
@@ -459,10 +508,6 @@
             ],
             "authors": [
                 {
-                    "name": "Elephants Group",
-                    "email": "elephantsgroup@outlook.com"
-                },
-                {
                     "name": "Jalal Jaberi",
                     "email": "proodoo@gmail.com"
                 }
@@ -476,24 +521,78 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2018-03-15T22:32:49+00:00"
+            "time": "2018-04-05T09:22:54+00:00"
         },
         {
-            "name": "elephantsgroup/eg-user",
-            "version": "1.0.0",
+            "name": "elephantsgroup/eg-stat",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ElephantsGroup/eg-user.git",
-                "reference": "adefafe45c5324b4dff6bd9199253c5c1ad231de"
+                "url": "https://github.com/ElephantsGroup/eg-stat.git",
+                "reference": "43b668eb5eebdd165fc3b693749611fdee77b9d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ElephantsGroup/eg-user/zipball/adefafe45c5324b4dff6bd9199253c5c1ad231de",
-                "reference": "adefafe45c5324b4dff6bd9199253c5c1ad231de",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-stat/zipball/43b668eb5eebdd165fc3b693749611fdee77b9d1",
+                "reference": "43b668eb5eebdd165fc3b693749611fdee77b9d1",
                 "shasum": ""
             },
             "require": {
-                "elephantsgroup/yii2-base": ">=0.3.2",
+                "elephantsgroup/eg-base": "~1",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": ">=2.0.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\stat\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arvin Firouzi",
+                    "email": "arvin.firouzi@yahoo.com"
+                },
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "proodoo@gmail.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "arezoumajd@gmail.com"
+                }
+            ],
+            "description": "Yii2 elephantsGroup statistics library",
+            "homepage": "http://elephantsgroup.com",
+            "keywords": [
+                "elephantsGroup",
+                "extension",
+                "statistics",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-04-23T17:40:11+00:00"
+        },
+        {
+            "name": "elephantsgroup/eg-user",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-user.git",
+                "reference": "4b5a70d7c7d24607d4e9d5c9e725e8761aeed4d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-user/zipball/4b5a70d7c7d24607d4e9d5c9e725e8761aeed4d1",
+                "reference": "4b5a70d7c7d24607d4e9d5c9e725e8761aeed4d1",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "^2.0.13",
                 "yiisoft/yii2-authclient": "^2.1.0",
@@ -535,47 +634,65 @@
                 "elephantsGroup",
                 "yii2"
             ],
-            "time": "2018-04-05T19:32:23+00:00"
+            "time": "2018-04-21T17:22:56+00:00"
         },
         {
-            "name": "elephantsgroup/yii2-base",
+            "name": "elephantsgroup/eg-admin",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://5.160.13.75:8044/Yii2/eg-base.git",
-                "reference": "ed39b6bb5ef768eb8d8caa25cc3864dc14cbb879"
+                "url": "https://github.com/elephantsgroup/eg-admin.git",
+                "reference": "13de4624a0e46d8341d3461f81046f39a6459836"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elephantsgroup/eg-admin/zipball/13de4624a0e46d8341d3461f81046f39a6459836",
+                "reference": "13de4624a0e46d8341d3461f81046f39a6459836",
+                "shasum": ""
             },
             "require": {
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": "~2.0.7"
+            },
+            "require-dev": {
+                "yiisoft/yii2-codeception": "~2.0"
+            },
+            "suggest": {
+                "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
             },
             "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.master": "1.0.x-dev",
+                    "dev-master": "2.x-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "elephantsGroup\\base\\": ""
+                    "elephantsgroup\\admin\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Jalal Jaberi",
-                    "email": "j_jaberi@yahoo.com"
-                },
-                {
-                    "name": "Elephants Group",
-                    "email": "elephantsgroup@outlook.com"
+                    "name": "Misbahul Munir",
+                    "email": "misbahuldmunir@gmail.com"
                 }
             ],
-            "description": "Yii 2 elephantsGroup base library",
+            "description": "RBAC Auth manager for Yii2 ",
             "keywords": [
-                "elephantsGroup",
-                "extension",
-                "yii",
-                "yii2"
+                "admin",
+                "auth",
+                "rbac",
+                "yii"
             ],
-            "time": "2016-12-04T12:42:54+00:00"
+            "time": "2016-12-01 03:31:21"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -630,12 +747,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "c63b07e0968134b9bc522c16c521d38be0fabbb3"
+                "reference": "3a8402439f8cff66a83ed42bc562d2385b83c471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/c63b07e0968134b9bc522c16c521d38be0fabbb3",
-                "reference": "c63b07e0968134b9bc522c16c521d38be0fabbb3",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/3a8402439f8cff66a83ed42bc562d2385b83c471",
+                "reference": "3a8402439f8cff66a83ed42bc562d2385b83c471",
                 "shasum": ""
             },
             "require": {
@@ -681,49 +798,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2018-03-17T22:18:35+00:00"
-        },
-        {
-            "name": "twbs/bootstrap",
-            "version": "v3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6d03173a1aad98e75f7d33e65b411c519176c59a",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                },
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                }
-            ],
-            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
-            "homepage": "http://getbootstrap.com",
-            "keywords": [
-                "bootstrap",
-                "css"
-            ],
-            "time": "2013-12-05T16:09:10+00:00"
+            "time": "2018-04-20T06:13:15+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -731,12 +806,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "0c46b4bf8338691feaaa869d3e8790da090ecadd"
+                "reference": "754bcb77061ae8fda113f6da7caf424217769e00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/0c46b4bf8338691feaaa869d3e8790da090ecadd",
-                "reference": "0c46b4bf8338691feaaa869d3e8790da090ecadd",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/754bcb77061ae8fda113f6da7caf424217769e00",
+                "reference": "754bcb77061ae8fda113f6da7caf424217769e00",
                 "shasum": ""
             },
             "require": {
@@ -823,7 +898,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2018-04-16T10:22:54+00:00"
+            "time": "2018-04-23T12:01:56+00:00"
         },
         {
             "name": "yiisoft/yii2-authclient",
@@ -879,26 +954,31 @@
         },
         {
             "name": "yiisoft/yii2-bootstrap",
-            "version": "2.0.0-beta",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "d2518d1f6fb0b3e0e3aba50b9c35f56d580eb3c4"
+                "reference": "7889c96f786c5cafd7a7325b432d774029835647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/d2518d1f6fb0b3e0e3aba50b9c35f56d580eb3c4",
-                "reference": "d2518d1f6fb0b3e0e3aba50b9c35f56d580eb3c4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/7889c96f786c5cafd7a7325b432d774029835647",
+                "reference": "7889c96f786c5cafd7a7325b432d774029835647",
                 "shasum": ""
             },
             "require": {
-                "twbs/bootstrap": "3.0.*",
-                "yiisoft/yii2": "*"
+                "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
+                "yiisoft/yii2": "~2.0.6"
             },
             "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "yii\\bootstrap\\": ""
+                    "yii\\bootstrap\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -907,10 +987,22 @@
             ],
             "authors": [
                 {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                },
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "amigo.cobos@gmail.com"
+                },
+                {
                     "name": "Qiang Xue",
                     "email": "qiang.xue@gmail.com",
-                    "homepage": "http://www.yiiframework.com/",
-                    "role": "Founder and project lead"
+                    "homepage": "http://www.yiiframework.com/"
                 }
             ],
             "description": "The Twitter Bootstrap extension for the Yii framework",
@@ -918,7 +1010,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2014-04-13T21:58:59+00:00"
+            "time": "2018-04-04T23:06:29+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -1027,12 +1119,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "0d5ad79a6debe5fbb753c2ce4a89a7139e4acfe6"
+                "reference": "cbc5a8e1f4afe6088131005bfb023b9ec7c9b18b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/0d5ad79a6debe5fbb753c2ce4a89a7139e4acfe6",
-                "reference": "0d5ad79a6debe5fbb753c2ce4a89a7139e4acfe6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/cbc5a8e1f4afe6088131005bfb023b9ec7c9b18b",
+                "reference": "cbc5a8e1f4afe6088131005bfb023b9ec7c9b18b",
                 "shasum": ""
             },
             "require": {
@@ -1069,7 +1161,7 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "time": "2018-01-31T16:29:32+00:00"
+            "time": "2018-04-23T07:54:07+00:00"
         }
     ],
     "packages-dev": [
@@ -1079,12 +1171,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "250532dc5ee137885e320e45aa765c3fa88bf624"
+                "reference": "051220255462c080b7c56d09192a930db84c72d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/250532dc5ee137885e320e45aa765c3fa88bf624",
-                "reference": "250532dc5ee137885e320e45aa765c3fa88bf624",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/051220255462c080b7c56d09192a930db84c72d9",
+                "reference": "051220255462c080b7c56d09192a930db84c72d9",
                 "shasum": ""
             },
             "require": {
@@ -1118,7 +1210,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2018-04-16T10:54:47+00:00"
+            "time": "2018-04-17T18:34:52+00:00"
         }
     ],
     "aliases": [],

@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'eg-cms-mini',
+    'id' => 'eg-cms',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -22,5 +22,11 @@ return [
             ],
         ],
     ],
+	'modules' => [
+        'stat' => [
+            'layout' => '//sb-admin',
+            'as frontend' => 'elephantsGroup\stat\filters\FrontendFilter',
+        ], 
+	],
     'params' => $params,
 ];

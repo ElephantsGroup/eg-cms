@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'eg-cms-mini',
+    'id' => 'eg-cms',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
@@ -21,6 +21,18 @@ return [
                 ],
             ],
         ],
-    ],
-    'params' => $params,
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=eg-cms',
+            'username' => 'eg',
+            'password' => 'Ht3KK9LFd2iVssCD',
+            'charset' => 'utf8',
+			'tablePrefix' => 'eg_',
+        ],
+		'authManager' => [
+			'class' => 'yii\rbac\DbManager',
+		],
+   ],
+    
+'params' => $params,
 ];
