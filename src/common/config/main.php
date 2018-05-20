@@ -75,6 +75,9 @@ return [
         'comment' => [
             'class' => 'elephantsGroup\comment\Module',
         ],
+        'contact' => [
+            'class' => 'elephantsGroup\contact\Module',
+        ],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',

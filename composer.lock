@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a790282b0bb85d3798dcceaa3918a9d",
+    "content-hash": "fa924a3bbe9d96a87d55131f001236a3",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -538,6 +538,55 @@
                 "yii2"
             ],
             "time": "2018-05-20T16:50:08+00:00"
+        },
+        {
+            "name": "elephantsgroup/eg-contact",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-contact.git",
+                "reference": "03734382a2578ce64a01be0af41f930980f23bae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-contact/zipball/03734382a2578ce64a01be0af41f930980f23bae",
+                "reference": "03734382a2578ce64a01be0af41f930980f23bae",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\contact\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 contact module",
+            "keywords": [
+                "contact",
+                "elephantsGroup",
+                "extension",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-16T15:33:43+00:00"
         },
         {
             "name": "elephantsgroup/eg-follow",

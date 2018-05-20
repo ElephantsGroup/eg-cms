@@ -54,6 +54,9 @@ return [
             'layout' => '//sb-admin',
 			'as backend' => 'elephantsGroup\comment\filters\BackendFilter',
 		],
+		'contact' => [
+            'layout' => '//sb-admin',
+		],
 	],
     'params' => $params,
 ];
