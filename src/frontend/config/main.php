@@ -30,6 +30,9 @@ return [
 		'follow' => [
 			'as frontend' => 'elephantsGroup\follow\filters\FrontendFilter',
 		],
+		'like' => [
+			'as frontend' => 'elephantsGroup\like\filters\FrontendFilter',
+		],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',

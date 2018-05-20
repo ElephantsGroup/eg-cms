@@ -66,12 +66,20 @@ return [
         'follow' => [
             'class' => 'elephantsGroup\follow\Module',
         ], 
+        'like' => [
+            'class' => 'elephantsGroup\like\Module',
+        ],
+        'star-rating' => [
+            'class' => 'elephantsGroup\starRating\Module',
+        ],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
 			'admin/*',
 			'follow/ajax/*',
+			'like/ajax/*',
+			'star-rating/ajax/*',
 		],
 	]
 ];

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36689b2cc77661dec150b4c4b2499000",
+    "content-hash": "7a790282b0bb85d3798dcceaa3918a9d",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -491,17 +491,66 @@
             "time": "2018-05-16T10:31:45+00:00"
         },
         {
+            "name": "elephantsgroup/eg-comment",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-comment.git",
+                "reference": "de06870e8672f4352e83f4d7fc869db325e609af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-comment/zipball/de06870e8672f4352e83f4d7fc869db325e609af",
+                "reference": "de06870e8672f4352e83f4d7fc869db325e609af",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\comment\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 comments module",
+            "keywords": [
+                "comments",
+                "elephantsGroup",
+                "extension",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-20T16:50:08+00:00"
+        },
+        {
             "name": "elephantsgroup/eg-follow",
             "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ElephantsGroup/eg-follow.git",
-                "reference": "8a8d7e1d6fddc4e49d33f8a08b8df25467ec1ebc"
+                "reference": "3eed25cae61f443f4e91380b05c805f57cc84df6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ElephantsGroup/eg-follow/zipball/8a8d7e1d6fddc4e49d33f8a08b8df25467ec1ebc",
-                "reference": "8a8d7e1d6fddc4e49d33f8a08b8df25467ec1ebc",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-follow/zipball/3eed25cae61f443f4e91380b05c805f57cc84df6",
+                "reference": "3eed25cae61f443f4e91380b05c805f57cc84df6",
                 "shasum": ""
             },
             "require": {
@@ -630,6 +679,55 @@
             "time": "2018-04-05T09:22:54+00:00"
         },
         {
+            "name": "elephantsgroup/eg-like",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-like.git",
+                "reference": "a7808ae1029337145ab0c0688b2deb0d91967379"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-like/zipball/a7808ae1029337145ab0c0688b2deb0d91967379",
+                "reference": "a7808ae1029337145ab0c0688b2deb0d91967379",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\like\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 like module",
+            "keywords": [
+                "elephantsGroup",
+                "extension",
+                "like",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-20T14:47:53+00:00"
+        },
+        {
             "name": "elephantsgroup/eg-service-relation",
             "version": "1.0.0",
             "source": {
@@ -678,6 +776,55 @@
                 "yii2"
             ],
             "time": "2018-05-20T11:28:25+00:00"
+        },
+        {
+            "name": "elephantsgroup/eg-star-rating",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-star-rating.git",
+                "reference": "fed12334fc29eba461d693b9873223c8003a47ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-star-rating/zipball/fed12334fc29eba461d693b9873223c8003a47ce",
+                "reference": "fed12334fc29eba461d693b9873223c8003a47ce",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\starRating\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 star rating module",
+            "keywords": [
+                "elephantsGroup",
+                "extension",
+                "satr-rating",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-20T15:32:24+00:00"
         },
         {
             "name": "elephantsgroup/eg-stat",

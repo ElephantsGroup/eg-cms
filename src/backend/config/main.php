@@ -42,6 +42,14 @@ return [
             'layout' => '//sb-admin',
 			'as backend' => 'elephantsGroup\follow\filters\BackendFilter',
 		],
+		'like' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\like\filters\BackendFilter',
+		],
+		'star-rating' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\starRating\filters\BackendFilter',
+		],
 	],
     'params' => $params,
 ];
