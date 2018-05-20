@@ -57,6 +57,10 @@ return [
 		'contact' => [
             'layout' => '//sb-admin',
 		],
+		'blog' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\blog\filters\BackendFilter',
+		],
 	],
     'params' => $params,
 ];

@@ -35,7 +35,8 @@
 		"elephantsgroup/eg-like": "~1",
 		"elephantsgroup/eg-star-rating": "~1",
 		"elephantsgroup/eg-comment": "~1",
-		"elephantsgroup/eg-contact": "~1"
+		"elephantsgroup/eg-contact": "~1",
+		"elephantsgroup/eg-blog": "~1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*"

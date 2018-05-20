@@ -36,11 +36,15 @@ return [
 		'comment' => [
 			'as frontend' => 'elephantsGroup\comment\filters\FrontendFilter',
 		],
+		'blog' => [
+			'as frontend' => 'elephantsGroup\blog\filters\FrontendFilter',
+		],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
 			'site/*',
+			'blog/*',
 		],
 	],
     'params' => $params,

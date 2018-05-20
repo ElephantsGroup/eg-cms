@@ -78,6 +78,9 @@ return [
         'contact' => [
             'class' => 'elephantsGroup\contact\Module',
         ],
+        'blog' => [
+            'class' => 'elephantsGroup\blog\Module',
+        ],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
