@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37dc99d8dd4393e04f7d44832bd498d9",
+    "content-hash": "36689b2cc77661dec150b4c4b2499000",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -491,6 +491,55 @@
             "time": "2018-05-16T10:31:45+00:00"
         },
         {
+            "name": "elephantsgroup/eg-follow",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-follow.git",
+                "reference": "8a8d7e1d6fddc4e49d33f8a08b8df25467ec1ebc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-follow/zipball/8a8d7e1d6fddc4e49d33f8a08b8df25467ec1ebc",
+                "reference": "8a8d7e1d6fddc4e49d33f8a08b8df25467ec1ebc",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\follow\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "2 follow module",
+            "keywords": [
+                "Follow",
+                "elephantsGroup",
+                "extension",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-16T15:35:26+00:00"
+        },
+        {
             "name": "elephantsgroup/eg-jdate",
             "version": "1.0.0",
             "source": {
@@ -586,12 +635,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ElephantsGroup/eg-service-relation.git",
-                "reference": "d23da9745611e330c7c77e576b2f432b31789521"
+                "reference": "caa24f8f806cc557c623e38166b6b498bd69b739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ElephantsGroup/eg-service-relation/zipball/d23da9745611e330c7c77e576b2f432b31789521",
-                "reference": "d23da9745611e330c7c77e576b2f432b31789521",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-service-relation/zipball/caa24f8f806cc557c623e38166b6b498bd69b739",
+                "reference": "caa24f8f806cc557c623e38166b6b498bd69b739",
                 "shasum": ""
             },
             "require": {

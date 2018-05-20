@@ -63,11 +63,15 @@ return [
 			'class' => 'elephantsGroup\user\Module',
 			'enableWelcomMessage' => false,
 		],
+        'follow' => [
+            'class' => 'elephantsGroup\follow\Module',
+        ], 
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
-			'admin/*'
+			'admin/*',
+			'follow/ajax/*',
 		],
 	]
 ];

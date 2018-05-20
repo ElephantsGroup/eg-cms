@@ -37,7 +37,11 @@ return [
 				1 => 'News',
 				2 => 'Events',
 			],
-        ]
+        ],
+		'follow' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\follow\filters\BackendFilter',
+		],
 	],
     'params' => $params,
 ];

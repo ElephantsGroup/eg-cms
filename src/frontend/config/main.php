@@ -26,7 +26,16 @@ return [
         'stat' => [
             'layout' => '//sb-admin',
             'as frontend' => 'elephantsGroup\stat\filters\FrontendFilter',
-        ], 
+        ],
+		'follow' => [
+			'as frontend' => 'elephantsGroup\follow\filters\FrontendFilter',
+		],
+	],
+    'as access' => [
+        'class' => 'elephantsGroup\admin\components\AccessControl',
+        'allowActions' => [
+			'site/*',
+		],
 	],
     'params' => $params,
 ];
