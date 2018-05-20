@@ -61,6 +61,14 @@ return [
             'layout' => '//sb-admin',
 			'as backend' => 'elephantsGroup\blog\filters\BackendFilter',
 		],
+		'event' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\event\filters\BackendFilter',
+		],
+		'news' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\news\filters\BackendFilter',
+		],
 	],
     'params' => $params,
 ];

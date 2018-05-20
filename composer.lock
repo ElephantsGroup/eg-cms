@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94a70c347e891427baafcf25c81e3cc3",
+    "content-hash": "d14f0522a415e0472a93e36c93538709",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -496,12 +496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ElephantsGroup/eg-blog.git",
-                "reference": "bef26e75bfbc8548786a9489a4ca1292dd47b324"
+                "reference": "4bb75b9c1ddb45bf0d35c6b909563fd69c80ac39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ElephantsGroup/eg-blog/zipball/bef26e75bfbc8548786a9489a4ca1292dd47b324",
-                "reference": "bef26e75bfbc8548786a9489a4ca1292dd47b324",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-blog/zipball/4bb75b9c1ddb45bf0d35c6b909563fd69c80ac39",
+                "reference": "4bb75b9c1ddb45bf0d35c6b909563fd69c80ac39",
                 "shasum": ""
             },
             "require": {
@@ -643,6 +643,61 @@
                 "yii2"
             ],
             "time": "2018-05-16T15:33:43+00:00"
+        },
+        {
+            "name": "elephantsgroup/eg-event",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-event.git",
+                "reference": "ac094271a760abaf4efa34ab81e8aad11dcae59d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-event/zipball/ac094271a760abaf4efa34ab81e8aad11dcae59d",
+                "reference": "ac094271a760abaf4efa34ab81e8aad11dcae59d",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-comment": "~1",
+                "elephantsgroup/eg-follow": "~1",
+                "elephantsgroup/eg-jdate": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "elephantsgroup/eg-like": "~1",
+                "elephantsgroup/eg-star-rating": "~1",
+                "elephantsgroup/eg-stat": "~1",
+                "mihaildev/yii2-ckeditor": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\event\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "keywords": [
+                "elephantsGroup",
+                "event",
+                "extension",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-16T15:34:08+00:00"
         },
         {
             "name": "elephantsgroup/eg-follow",
@@ -831,6 +886,66 @@
                 "yii2"
             ],
             "time": "2018-05-20T14:47:53+00:00"
+        },
+        {
+            "name": "elephantsgroup/eg-news",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-news.git",
+                "reference": "003e9d190d6da75861fa22f6cfb93dc68a5fec34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-news/zipball/003e9d190d6da75861fa22f6cfb93dc68a5fec34",
+                "reference": "003e9d190d6da75861fa22f6cfb93dc68a5fec34",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-comment": "~1",
+                "elephantsgroup/eg-follow": "~1",
+                "elephantsgroup/eg-jdate": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "elephantsgroup/eg-like": "~1",
+                "elephantsgroup/eg-star-rating": "~1",
+                "elephantsgroup/eg-stat": "~1",
+                "kartik-v/yii2-widget-timepicker": "*",
+                "mihaildev/yii2-ckeditor": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\news\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arvin Firouzi",
+                    "email": "arvin.firouzi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 news management module",
+            "keywords": [
+                "elephantsGroup",
+                "news",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-20T18:19:52+00:00"
         },
         {
             "name": "elephantsgroup/eg-service-relation",

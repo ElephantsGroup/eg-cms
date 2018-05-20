@@ -39,12 +39,20 @@ return [
 		'blog' => [
 			'as frontend' => 'elephantsGroup\blog\filters\FrontendFilter',
 		],
+		'event' => [
+			'as frontend' => 'elephantsGroup\event\filters\FrontendFilter',
+		],
+		'news' => [
+			'as frontend' => 'elephantsGroup\news\filters\FrontendFilter',
+		],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
 			'site/*',
 			'blog/*',
+			'event/*',
+			'news/*',
 		],
 	],
     'params' => $params,

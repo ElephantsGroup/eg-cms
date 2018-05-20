@@ -81,6 +81,12 @@ return [
         'blog' => [
             'class' => 'elephantsGroup\blog\Module',
         ],
+        'event' => [
+            'class' => 'elephantsGroup\event\Module',
+        ],
+        'news' => [
+            'class' => 'elephantsGroup\news\Module',
+        ],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
