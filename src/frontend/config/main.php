@@ -45,6 +45,12 @@ return [
 		'news' => [
 			'as frontend' => 'elephantsGroup\news\filters\FrontendFilter',
 		],
+		'gallery' => [
+			'as frontend' => 'elephantsGroup\gallery\filters\FrontendFilter',
+		],
+		'owl-slider' => [
+			'as frontend' => 'elephantsGroup\owlSlider\filters\FrontendFilter',
+		],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
@@ -53,6 +59,8 @@ return [
 			'blog/*',
 			'event/*',
 			'news/*',
+			'gallery/*',
+			'owl-slider/*',
 		],
 	],
     'params' => $params,

@@ -69,6 +69,13 @@ return [
             'layout' => '//sb-admin',
 			'as backend' => 'elephantsGroup\news\filters\BackendFilter',
 		],
+		'gallery' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\gallery\filters\BackendFilter',
+		],
+		'owl-slider' => [
+            'layout' => '//sb-admin',
+		],
 	],
     'params' => $params,
 ];

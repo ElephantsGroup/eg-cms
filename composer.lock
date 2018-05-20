@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d14f0522a415e0472a93e36c93538709",
+    "content-hash": "08d2cfca3357e1712b6942de7c4de397",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -749,6 +749,56 @@
             "time": "2018-05-16T15:35:26+00:00"
         },
         {
+            "name": "elephantsgroup/eg-gallery",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-gallery.git",
+                "reference": "b9ba8cd3f3644c35fec40c2ff281b4791aa9cadd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-gallery/zipball/b9ba8cd3f3644c35fec40c2ff281b4791aa9cadd",
+                "reference": "b9ba8cd3f3644c35fec40c2ff281b4791aa9cadd",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdate": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "elephantsgroup/eg-stat": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\gallery\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 gallery management module",
+            "keywords": [
+                "elephantsGroup",
+                "gallery",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-20T18:29:12+00:00"
+        },
+        {
             "name": "elephantsgroup/eg-jdate",
             "version": "1.0.0",
             "source": {
@@ -946,6 +996,55 @@
                 "yii2"
             ],
             "time": "2018-05-20T18:19:52+00:00"
+        },
+        {
+            "name": "elephantsgroup/eg-owl-slider",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElephantsGroup/eg-owl-slider.git",
+                "reference": "cb9617d806d449a3bdc81636bfbc38d6a14dcd25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElephantsGroup/eg-owl-slider/zipball/cb9617d806d449a3bdc81636bfbc38d6a14dcd25",
+                "reference": "cb9617d806d449a3bdc81636bfbc38d6a14dcd25",
+                "shasum": ""
+            },
+            "require": {
+                "elephantsgroup/eg-base": "~1",
+                "elephantsgroup/eg-jdate": "~1",
+                "elephantsgroup/eg-jdf": "~1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "elephantsGroup\\owlSlider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jalal Jaberi",
+                    "email": "j_jaberi@yahoo.com"
+                },
+                {
+                    "name": "Arezou Zahedi Majd",
+                    "email": "a_majd_8@yahoo.com"
+                }
+            ],
+            "description": "Yii2 owl slider management module",
+            "keywords": [
+                "elephantsGroup",
+                "owl-slider",
+                "yii",
+                "yii2"
+            ],
+            "time": "2018-05-20T18:40:26+00:00"
         },
         {
             "name": "elephantsgroup/eg-service-relation",

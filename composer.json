@@ -38,7 +38,9 @@
 		"elephantsgroup/eg-contact": "~1",
 		"elephantsgroup/eg-blog": "~1",
 		"elephantsgroup/eg-event": "~1",
-		"elephantsgroup/eg-news": "~1"
+		"elephantsgroup/eg-news": "~1",
+		"elephantsgroup/eg-gallery": "~1",
+		"elephantsgroup/eg-owl-slider": "~1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*"

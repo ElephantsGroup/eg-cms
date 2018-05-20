@@ -87,6 +87,12 @@ return [
         'news' => [
             'class' => 'elephantsGroup\news\Module',
         ],
+        'gallery' => [
+            'class' => 'elephantsGroup\gallery\Module',
+        ],
+        'owl-slider' => [
+            'class' => 'elephantsGroup\owlSlider\Module',
+        ],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
