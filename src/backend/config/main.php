@@ -50,6 +50,10 @@ return [
             'layout' => '//sb-admin',
 			'as backend' => 'elephantsGroup\starRating\filters\BackendFilter',
 		],
+		'comment' => [
+            'layout' => '//sb-admin',
+			'as backend' => 'elephantsGroup\comment\filters\BackendFilter',
+		],
 	],
     'params' => $params,
 ];

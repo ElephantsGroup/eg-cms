@@ -33,6 +33,9 @@ return [
 		'like' => [
 			'as frontend' => 'elephantsGroup\like\filters\FrontendFilter',
 		],
+		'comment' => [
+			'as frontend' => 'elephantsGroup\comment\filters\FrontendFilter',
+		],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',

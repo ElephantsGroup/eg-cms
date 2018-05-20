@@ -72,6 +72,9 @@ return [
         'star-rating' => [
             'class' => 'elephantsGroup\starRating\Module',
         ],
+        'comment' => [
+            'class' => 'elephantsGroup\comment\Module',
+        ],
 	],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
@@ -80,6 +83,7 @@ return [
 			'follow/ajax/*',
 			'like/ajax/*',
 			'star-rating/ajax/*',
+			'comment/ajax/*',
 		],
 	]
 ];
