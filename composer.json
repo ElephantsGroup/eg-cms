@@ -19,28 +19,29 @@
         "issues": "https://github.com/ElephantsGroup/eg-cms/issues?state=open",
         "source": "https://github.com/ElephantsGroup/eg-cms/"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=7.0.0",
-        "yiisoft/yii2": ">=2.0.0",
+        "yiisoft/yii2": "~2",
         "yiisoft/yii2-swiftmailer": "*",
         "elephantsgroup/eg-base": "~1",
         "elephantsgroup/eg-jdf": "~1",
         "elephantsgroup/eg-jdate": "~1",
 		"elephantsgroup/eg-user": "~1",
         "elephantsgroup/eg-admin": "~1",
-		"elephantsgroup/eg-stat": "~1"
+		"elephantsgroup/eg-stat": "~1",
+		"elephantsgroup/eg-service-relation": "~1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*"
     },
     "config": {
         "process-timeout": 1800,
-         "secure-http": false
-    },
-    "extra": {
-        "asset-installer-paths": {
-            "bower-asset-library": "vendor/bower"
-        }
+         "secure-http": false,
+		 "fxp-asset": {
+			"installer-paths": {
+				"bower-asset-library": "vendor/bower"
+			}
+		}
     }
 }

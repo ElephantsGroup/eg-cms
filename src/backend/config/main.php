@@ -29,6 +29,14 @@ return [
        'admin' => [
             'class' => 'elephantsGroup\admin\Module',
             'layout' => '//sb-admin',
+        ],
+       'service-relation' => [
+            'class' => 'elephantsGroup\serviceRelation\Module',
+            'layout' => '//sb-admin',
+			'services' => [
+				1 => 'News',
+				2 => 'Events',
+			],
         ]
 	],
     'params' => $params,

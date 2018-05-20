@@ -67,9 +67,7 @@ return [
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
-			'*',
-            '*/*',
-			'admin/*',
+			'admin/*'
 		],
 	]
 ];
