@@ -14,4 +14,10 @@ return [
             ],
         ],
 	],
+    'as access' => [
+        'class' => 'elephantsGroup\admin\components\AccessControl',
+        'allowActions' => [
+			'debug/*',
+		],
+	]
 ];
