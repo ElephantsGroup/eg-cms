@@ -1,9 +1,11 @@
 /.idea/*
-/assets/*
 /src/frontend/runtime/*
 /src/backend/runtime/*
 /src/console/runtime/*
 /vendor
 /composer.phar
-/admin/assets/*
 /uploads/*
+
+!/src/frontend/runtime/sessions/.gitignore
+!/src/backend/runtime/sessions/.gitignore
+!.gitignore
