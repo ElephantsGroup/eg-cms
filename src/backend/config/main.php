@@ -30,6 +30,9 @@ return [
             'class' => 'elephantsGroup\admin\Module',
             'layout' => '//sb-admin',
         ],
+		'user' => [
+            'layout' => '//sb-admin',
+		],
        'service-relation' => [
             'class' => 'elephantsGroup\serviceRelation\Module',
             'layout' => '//sb-admin',
@@ -75,6 +78,13 @@ return [
 		],
 		'owl-slider' => [
             'layout' => '//sb-admin',
+		],
+	],
+    'as access' => [
+        'class' => 'elephantsGroup\admin\components\AccessControl',
+        'allowActions' => [
+			'user/login',
+			'user/logout',
 		],
 	],
     'params' => $params,
