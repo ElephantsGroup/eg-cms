@@ -28,13 +28,13 @@ return [
                 'httpOnly' => true,
             ],
         ],
-        'session' => [
+        /*'session' => [
             'name' => 'BACKENDSESSID',
             'cookieParams' => [
                 'httpOnly' => true,
                 'path'     => '/admin',
             ],
-        ], 
+        ],*/
     ],
     'modules' => [
         'stat' => [

@@ -94,14 +94,4 @@ return [
             'class' => 'elephantsGroup\owlSlider\Module',
         ],
 	],
-    'as access' => [
-        'class' => 'elephantsGroup\admin\components\AccessControl',
-        'allowActions' => [
-			'admin/*',
-			'follow/ajax/*',
-			'like/ajax/*',
-			'star-rating/ajax/*',
-			'comment/ajax/*',
-		],
-	]
 ];

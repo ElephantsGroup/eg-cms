@@ -148,7 +148,7 @@ if(isset(Yii::$app->controller->direction) && Yii::$app->controller->direction =
                     */ ?>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?= Yii::$app->user->identity->username ?> <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?= (Yii::$app->user->identity == null) ? "" : Yii::$app->user->identity->username ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="<?= Yii::getAlias('@web') ?>/user/profile?lang=<?= isset(Yii::$app->controller->language) ? Yii::$app->controller->language : 'fa-IR' ?>"><i class="fa fa-fw fa-user"></i> <?= Yii::t('app', 'Profile') ?></a>

@@ -28,13 +28,13 @@ return [
                 'httpOnly' => true,
             ],
         ],
-        'session' => [
+        /*'session' => [
             'name' => 'FRONTENDSESSID',
             'cookieParams' => [
                 'httpOnly' => true,
                 'path'     => '/',
             ],
-        ],
+        ],*/
     ],
     'modules' => [
         'admin' => [
@@ -78,6 +78,10 @@ return [
             'site/*',
             'user/security/login',
             'user/security/logout',
+			'follow/ajax/*',
+			'like/ajax/*',
+			'star-rating/ajax/*',
+			'comment/ajax/*',
             'blog/*',
             'event/*',
             'news/*',
