@@ -21,47 +21,69 @@ return [
                 ],
             ],
         ],
+        'user' => [
+            'identityCookie' => [
+                'name'     => '_frontendIdentity',
+                'path'     => '/',
+                'httpOnly' => true,
+            ],
+        ],
+        'session' => [
+            'name' => 'FRONTENDSESSID',
+            'cookieParams' => [
+                'httpOnly' => true,
+                'path'     => '/',
+            ],
+        ],
     ],
-	'modules' => [
-        'stat' => [
+    'modules' => [
+        'admin' => [
+            'class' => 'elephantsGroup\admin\Module',
+        ],
+       'stat' => [
             'layout' => '//sb-admin',
             'as frontend' => 'elephantsGroup\stat\filters\FrontendFilter',
         ],
-		'follow' => [
-			'as frontend' => 'elephantsGroup\follow\filters\FrontendFilter',
-		],
-		'like' => [
-			'as frontend' => 'elephantsGroup\like\filters\FrontendFilter',
-		],
-		'comment' => [
-			'as frontend' => 'elephantsGroup\comment\filters\FrontendFilter',
-		],
-		'blog' => [
-			'as frontend' => 'elephantsGroup\blog\filters\FrontendFilter',
-		],
-		'event' => [
-			'as frontend' => 'elephantsGroup\event\filters\FrontendFilter',
-		],
-		'news' => [
-			'as frontend' => 'elephantsGroup\news\filters\FrontendFilter',
-		],
-		'gallery' => [
-			'as frontend' => 'elephantsGroup\gallery\filters\FrontendFilter',
-		],
-		'owl-slider' => [
-			'as frontend' => 'elephantsGroup\owlSlider\filters\FrontendFilter',
-		],
-	],
+        'user' => [
+            'as frontend' => 'elephantsGroup\user\filters\FrontendFilter',
+        ],
+        'follow' => [
+            'as frontend' => 'elephantsGroup\follow\filters\FrontendFilter',
+        ],
+        'like' => [
+            'as frontend' => 'elephantsGroup\like\filters\FrontendFilter',
+        ],
+        'comment' => [
+            'as frontend' => 'elephantsGroup\comment\filters\FrontendFilter',
+        ],
+        'blog' => [
+            'as frontend' => 'elephantsGroup\blog\filters\FrontendFilter',
+        ],
+        'event' => [
+            'as frontend' => 'elephantsGroup\event\filters\FrontendFilter',
+        ],
+        'news' => [
+            'as frontend' => 'elephantsGroup\news\filters\FrontendFilter',
+        ],
+        'gallery' => [
+            'as frontend' => 'elephantsGroup\gallery\filters\FrontendFilter',
+        ],
+        'owl-slider' => [
+            'as frontend' => 'elephantsGroup\owlSlider\filters\FrontendFilter',
+        ],
+    ],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
-			'site/*',
-			'blog/*',
-			'event/*',
-			'news/*',
-			'gallery/*',
-			'owl-slider/*',
-		],
-	],
+            'site/*',
+            'user/security/login',
+            'user/security/logout',
+            'blog/*',
+            'event/*',
+            'news/*',
+            'gallery/*',
+            'owl-slider/*',
+        ],
+    ],
     'params' => $params,
 ];

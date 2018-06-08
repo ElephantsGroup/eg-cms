@@ -21,71 +21,86 @@ return [
                 ],
             ],
         ],
+        'user' => [
+            'identityCookie' => [
+                'name'     => '_backendIdentity',
+                'path'     => '/admin',
+                'httpOnly' => true,
+            ],
+        ],
+        'session' => [
+            'name' => 'BACKENDSESSID',
+            'cookieParams' => [
+                'httpOnly' => true,
+                'path'     => '/admin',
+            ],
+        ], 
     ],
-	'modules' => [
+    'modules' => [
         'stat' => [
             'layout' => '//sb-admin',
-        ], 
+        ],
        'admin' => [
             'class' => 'elephantsGroup\admin\Module',
             'layout' => '//sb-admin',
         ],
-		'user' => [
+        'user' => [
             'layout' => '//sb-admin',
-		],
+            'as backend' => 'elephantsGroup\user\filters\BackendFilter',
+        ],
        'service-relation' => [
             'class' => 'elephantsGroup\serviceRelation\Module',
             'layout' => '//sb-admin',
-			'services' => [
-				1 => 'News',
-				2 => 'Events',
-			],
+            'services' => [
+                1 => 'News',
+                2 => 'Events',
+            ],
         ],
-		'follow' => [
+        'follow' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\follow\filters\BackendFilter',
-		],
-		'like' => [
+            'as backend' => 'elephantsGroup\follow\filters\BackendFilter',
+        ],
+        'like' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\like\filters\BackendFilter',
-		],
-		'star-rating' => [
+            'as backend' => 'elephantsGroup\like\filters\BackendFilter',
+        ],
+        'star-rating' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\starRating\filters\BackendFilter',
-		],
-		'comment' => [
+            'as backend' => 'elephantsGroup\starRating\filters\BackendFilter',
+        ],
+        'comment' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\comment\filters\BackendFilter',
-		],
-		'contact' => [
+            'as backend' => 'elephantsGroup\comment\filters\BackendFilter',
+        ],
+        'contact' => [
             'layout' => '//sb-admin',
-		],
-		'blog' => [
+        ],
+        'blog' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\blog\filters\BackendFilter',
-		],
-		'event' => [
+            'as backend' => 'elephantsGroup\blog\filters\BackendFilter',
+        ],
+        'event' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\event\filters\BackendFilter',
-		],
-		'news' => [
+            'as backend' => 'elephantsGroup\event\filters\BackendFilter',
+        ],
+        'news' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\news\filters\BackendFilter',
-		],
-		'gallery' => [
+            'as backend' => 'elephantsGroup\news\filters\BackendFilter',
+        ],
+        'gallery' => [
             'layout' => '//sb-admin',
-			'as backend' => 'elephantsGroup\gallery\filters\BackendFilter',
-		],
-		'owl-slider' => [
+            'as backend' => 'elephantsGroup\gallery\filters\BackendFilter',
+        ],
+        'owl-slider' => [
             'layout' => '//sb-admin',
-		],
-	],
+        ],
+    ],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
-			'user/login',
-			'user/logout',
-		],
-	],
+            'user/security/login',
+            'user/security/logout',
+        ],
+    ],
     'params' => $params,
 ];
