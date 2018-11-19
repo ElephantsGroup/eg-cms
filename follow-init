@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+/**
+ * EG Website Platform Initialization Tool
+ *
+ * @author Jalal Jaberi <j.jaberi@yahoo.com>
+ *
+ */
+
+if (!extension_loaded('openssl')) {
+    die('The OpenSSL PHP extension is required by Yii2.');
+}
+
+$root = str_replace('\\', '/', __DIR__);
+
+echo "Follow Module Initialization Tool v1.0\n\n";
+
+$str = file_get_contents("$root/src/common/config/main.php");
+$str = str_replace(["/*[FOLLOW_CONFIG_BEGIN]", "[FOLLOW_CONFIG_END]*/"], [ " ", " " ], $str);
+file_put_contents("$root/src/common/config/main.php", $str);
+
+$str = file_get_contents("$root/src/backend/config/main.php");
+$str = str_replace(["/*[FOLLOW_CONFIG_BEGIN]", "[FOLLOW_CONFIG_END]*/"], [ " ", " " ], $str);
+file_put_contents("$root/src/backend/config/main.php", $str);
+
+$str = file_get_contents("$root/src/frontend/config/main.php");
+$str = str_replace(["/*[FOLLOW_CONFIG_BEGIN]", "[FOLLOW_CONFIG_END]*/"], [ " ", " " ], $str);
+file_put_contents("$root/src/frontend/config/main.php", $str);

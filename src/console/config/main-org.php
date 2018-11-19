@@ -23,11 +23,11 @@ return [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=eg-cms',
-            'username' => 'eg',
-            'password' => 'Ht3KK9LFd2iVssCD',
+            'dsn' => 'mysql:host=localhost;dbname=[DBNAME]',
+            'username' => '[DBUSER]',
+            'password' => '[DBPASS]',
             'charset' => 'utf8',
-			'tablePrefix' => 'eg_',
+			'tablePrefix' => '[PREFIX]',
         ],
 		'authManager' => [
 			'class' => 'yii\rbac\DbManager',
@@ -35,4 +35,5 @@ return [
    ],
     
 'params' => $params,
+
 ];

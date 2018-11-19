@@ -1,0 +1,252 @@
+#!/usr/bin/env php
+<?php
+/**
+ * EG Website Platform Initialization Tool
+ *
+ * @author Jalal Jaberi <j.jaberi@yahoo.com>
+ *
+ */
+
+if (!extension_loaded('openssl')) {
+    die('The OpenSSL PHP extension is required by Yii2.');
+}
+
+$params = getParams();
+$root = str_replace('\\', '/', __DIR__);
+
+echo "EG Website Platform Initialization Tool v1.0\n\n";
+
+/*if(!file_exists($root . '/frontend/runtime/sessions/'))
+	mkdir($root . '/frontend/runtime/sessions/', 0777, true);
+if(!file_exists($root . '/backend/runtime/sessions/'))
+	mkdir($root . '/backend/runtime/sessions/', 0777, true);
+if(!file_exists($root . '/console/runtime/sessions/'))
+	mkdir($root . '/console/runtime/sessions/', 0777, true);*/
+
+if(!isset($params['dbname']))
+{
+    echo 'Enter database name: ';
+    $params['dbname'] = trim(fgets(STDIN));
+}
+if(!isset($params['dbuser']))
+{
+    echo 'Enter database username: ';
+    $params['dbuser'] = trim(fgets(STDIN));
+}
+if(!isset($params['dbpass']))
+{
+    echo 'Enter database password: ';
+    $params['dbpass'] = trim(fgets(STDIN));
+}
+if(!isset($params['prefix']))
+{
+    echo 'Enter desired table prefix: ';
+    $params['prefix'] = trim(fgets(STDIN));
+}
+
+$str = file_get_contents("$root/src/console/config/main-org.php");
+$str = str_replace(['[DBNAME]', '[DBUSER]', '[DBPASS]', '[PREFIX]'], [$params['dbname'], $params['dbuser'], $params['dbpass'], $params['prefix']], $str);
+file_put_contents("$root/src/console/config/main.php", $str);
+
+$str = file_get_contents("$root/src/common/config/main-org.php");
+$str = str_replace(['[DBNAME]', '[DBUSER]', '[DBPASS]', '[PREFIX]'], [$params['dbname'], $params['dbuser'], $params['dbpass'], $params['prefix']], $str);
+file_put_contents("$root/src/common/config/main.php", $str);
+
+/*
+$envs = require("$root/environments/conf.php");
+$env = array_keys($envs);
+
+$files = getFileList("$root/environments/{$env['path']}");
+if (isset($env['skipFiles'])) {
+    $skipFiles = $env['skipFiles'];
+    array_walk($skipFiles, function(&$value) use($env, $root) { $value = "$root/$value"; });
+    $files = array_diff($files, array_intersect_key($env['skipFiles'], array_filter($skipFiles, 'file_exists')));
+}
+$all = false;
+foreach ($files as $file) {
+    if (!copyFile($root, "environments/{$env['path']}/$file", $file, $all, $params)) {
+        break;
+    }
+}
+
+$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink'];
+foreach ($callbacks as $callback) {
+    if (!empty($env[$callback])) {
+        $callback($root, $env[$callback]);
+    }
+}
+
+function getFileList($root, $basePath = '')
+{
+    $files = [];
+    $handle = opendir($root);
+    while (($path = readdir($handle)) !== false) {
+        if ($path === '.git' || $path === '.svn' || $path === '.' || $path === '..') {
+            continue;
+        }
+        $fullPath = "$root/$path";
+        $relativePath = $basePath === '' ? $path : "$basePath/$path";
+        if (is_dir($fullPath)) {
+            $files = array_merge($files, getFileList($fullPath, $relativePath));
+        } else {
+            $files[] = $relativePath;
+        }
+    }
+    closedir($handle);
+    return $files;
+}
+
+function copyFile($root, $source, $target, &$all, $params)
+{
+    if (!is_file($root . '/' . $source)) {
+        echo "       skip $target ($source not exist)\n";
+        return true;
+    }
+    if (is_file($root . '/' . $target)) {
+        if (file_get_contents($root . '/' . $source) === file_get_contents($root . '/' . $target)) {
+            echo "  unchanged $target\n";
+            return true;
+        }
+        if ($all) {
+            echo "  overwrite $target\n";
+        } else {
+            echo "      exist $target\n";
+            echo "            ...overwrite? [Yes|No|All|Quit] ";
+
+
+            $answer = !empty($params['overwrite']) ? $params['overwrite'] : trim(fgets(STDIN));
+            if (!strncasecmp($answer, 'q', 1)) {
+                return false;
+            } else {
+                if (!strncasecmp($answer, 'y', 1)) {
+                    echo "  overwrite $target\n";
+                } else {
+                    if (!strncasecmp($answer, 'a', 1)) {
+                        echo "  overwrite $target\n";
+                        $all = true;
+                    } else {
+                        echo "       skip $target\n";
+                        return true;
+                    }
+                }
+            }
+        }
+        file_put_contents($root . '/' . $target, file_get_contents($root . '/' . $source));
+        return true;
+    }
+    echo "   generate $target\n";
+    @mkdir(dirname($root . '/' . $target), 0777, true);
+    file_put_contents($root . '/' . $target, file_get_contents($root . '/' . $source));
+    return true;
+}
+*/
+
+function getParams()
+{
+    $rawParams = [];
+    if (isset($_SERVER['argv'])) {
+        $rawParams = $_SERVER['argv'];
+        array_shift($rawParams);
+    }
+
+    $params = [];
+    foreach ($rawParams as $param) {
+        if (preg_match('/^--(\w+)(=(.*))?$/', $param, $matches)) {
+            $name = $matches[1];
+            $params[$name] = isset($matches[3]) ? $matches[3] : true;
+        } else {
+            $params[] = $param;
+        }
+    }
+    return $params;
+}
+
+/*
+function setWritable($root, $paths)
+{
+    foreach ($paths as $writable) {
+        if (is_dir("$root/$writable")) {
+            echo "      chmod 0777 $writable\n";
+            @chmod("$root/$writable", 0777);
+        } else {
+            echo "\n  Error. Directory $writable does not exist. \n";
+        }
+    }
+}
+
+function setExecutable($root, $paths)
+{
+    foreach ($paths as $executable) {
+        echo "      chmod 0755 $executable\n";
+        @chmod("$root/$executable", 0755);
+    }
+}
+
+function setCookieValidationKey($root, $paths)
+{
+    foreach ($paths as $file) {
+        echo "   generate cookie validation key in $file\n";
+        $file = $root . '/' . $file;
+        $length = 32;
+        $bytes = openssl_random_pseudo_bytes($length);
+        $key = strtr(substr(base64_encode($bytes), 0, $length), '+/=', '_-.');
+        $content = preg_replace('/(("|\')cookieValidationKey("|\')\s*=>\s*)(""|\'\')/', "\\1'$key'", file_get_contents($file));
+        file_put_contents($file, $content);
+    }
+}
+
+function createSymlink($root, $links) {
+    foreach ($links as $link => $target) {
+        echo "      symlink " . $root . "/" . $target . " " . $root . "/" . $link . "\n";
+        //first removing folders to avoid errors if the folder already exists
+        @rmdir($root . "/" . $link);
+        //next removing existing symlink in order to update the target
+        if (is_link($root . "/" . $link)) {
+            @unlink($root . "/" . $link);
+        }
+        @symlink($root . "/" . $target, $root . "/" . $link);
+    }
+}
+*/
+
+/*$str = file_get_contents("$root/src/common/config/main-org.php");
+file_put_contents("$root/src/common/config/main.php", $str);*/
+
+$str = file_get_contents("$root/src/frontend/config/main-org.php");
+file_put_contents("$root/src/frontend/config/main.php", $str);
+
+$str = file_get_contents("$root/src/backend/config/main-org.php");
+file_put_contents("$root/src/backend/config/main.php", $str);
+
+/*$str = file_get_contents("$root/backend/views/layouts/sb-admin-org.php");
+file_put_contents("$root/backend/views/layouts/sb-admin.php", $str);
+
+$str = file_get_contents("$root/frontend/views/layouts/creative-org.php");
+file_put_contents("$root/frontend/views/layouts/creative.php", $str);
+
+$str = file_get_contents("$root/frontend/views/layouts/creative-item-org.php");
+file_put_contents("$root/frontend/views/layouts/creative-item.php", $str);
+
+$str = file_get_contents("$root/frontend/views/site/creative-org.php");
+file_put_contents("$root/frontend/views/site/creative.php", $str);
+
+$str = file_get_contents("$root/frontend/views/news-list/creative-news-org.php");
+file_put_contents("$root/frontend/views/news-list/creative-news.php", $str);
+
+$str = file_get_contents("$root/frontend/views/news-list/creative-news-item-org.php");
+file_put_contents("$root/frontend/views/news-list/creative-news-item.php", $str);
+
+$str = file_get_contents("$root/frontend/views/event-list/creative-event-org.php");
+file_put_contents("$root/frontend/views/event-list/creative-event.php", $str);
+
+$str = file_get_contents("$root/frontend/views/event-list/creative-event-item-org.php");
+file_put_contents("$root/frontend/views/event-list/creative-event-item.php", $str);
+
+$str = file_get_contents("$root/frontend/views/blog-list/creative-blog-org.php");
+file_put_contents("$root/frontend/views/blog-list/creative-blog.php", $str);
+
+$str = file_get_contents("$root/frontend/views/blog-list/creative-blog-item-org.php");
+file_put_contents("$root/frontend/views/blog-list/creative-blog-item.php", $str);
+
+$str = file_get_contents("$root/frontend/views/pic-list/creative-pic-org.php");
+file_put_contents("$root/frontend/views/pic-list/creative-pic.php", $str);*/

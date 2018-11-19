@@ -37,9 +37,9 @@ return [
         ],*/
     ],
     'modules' => [
-        'stat' => [
+        /*[STAT_CONFIG_BEGIN]'stat' => [
             'layout' => '//sb-admin',
-        ],
+        ],[STAT_CONFIG_END]*/
        'admin' => [
             'class' => 'elephantsGroup\admin\Module',
             'layout' => '//sb-admin',
@@ -48,52 +48,52 @@ return [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\user\filters\BackendFilter',
         ],
-       'service-relation' => [
+       /*[SERVICE_RELATION_CONFIG_BEGIN]'service-relation' => [
             'class' => 'elephantsGroup\serviceRelation\Module',
             'layout' => '//sb-admin',
             'services' => [
                 1 => 'News',
                 2 => 'Events',
             ],
-        ],
-        'follow' => [
+        ],[SERVICE_RELATION_CONFIG_END]*/
+        /*[FOLLOW_CONFIG_BEGIN]'follow' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\follow\filters\BackendFilter',
-        ],
-        'like' => [
+        ],[FOLLOW_CONFIG_END]*/
+        /*[LIKE_CONFIG_BEGIN]'like' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\like\filters\BackendFilter',
-        ],
-        'star-rating' => [
+        ],[LIKE_CONFIG_END]*/
+        /*[STAR_RATING_CONFIG_BEGIN]'star-rating' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\starRating\filters\BackendFilter',
-        ],
-        'comment' => [
+        ],[STAR_RATING_CONFIG_END]*/
+        /*[COMMENT_CONFIG_BEGIN]'comment' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\comment\filters\BackendFilter',
-        ],
-        'contact' => [
+        ],[COMMENT_CONFIG_END]*/
+        /*[CONTACT_CONFIG_BEGIN]'contact' => [
             'layout' => '//sb-admin',
-        ],
-        'blog' => [
+        ],[CONTACT_CONFIG_END]*/
+        /*[BLOG_CONFIG_BEGIN]'blog' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\blog\filters\BackendFilter',
-        ],
-        'event' => [
+        ],[BLOG_CONFIG_END]*/
+        /*[EVENT_CONFIG_BEGIN]'event' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\event\filters\BackendFilter',
-        ],
-        'news' => [
+        ],[EVENT_CONFIG_END]*/
+        /*[NEWS_CONFIG_BEGIN]'news' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\news\filters\BackendFilter',
-        ],
-        'gallery' => [
+        ],[NEWS_CONFIG_END]*/
+        /*[GALLERY_CONFIG_BEGIN]'gallery' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\gallery\filters\BackendFilter',
-        ],
-        'owl-slider' => [
+        ],[GALLERY_CONFIG_END]*/
+        /*[OWL_SLIDER_CONFIG_BEGIN]'owl-slider' => [
             'layout' => '//sb-admin',
-        ],
+        ],[OWL_SLIDER_CONFIG_END]*/
     ],
     'as access' => [
         'class' => 'elephantsGroup\admin\components\AccessControl',

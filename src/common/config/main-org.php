@@ -3,13 +3,13 @@ return [
     'language' => 'fa-IR',
     'vendorPath' => dirname(dirname(dirname(__DIR__))) . '/vendor',
 	'components' => [
-        'db' => [
+		'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=eg-cms',
-            'username' => 'eg',
-            'password' => 'Ht3KK9LFd2iVssCD',
+            'dsn' => 'mysql:host=localhost;dbname=[DBNAME]',
+            'username' => '[DBUSER]',
+            'password' => '[DBPASS]',
             'charset' => 'utf8',
-			'tablePrefix' => 'eg_',
+			'tablePrefix' => '[PREFIX]',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -56,42 +56,42 @@ return [
             ],
             'default_language' => 'fa-IR'
         ],
-        'stat' => [
+        /*[STAT_CONFIG_BEGIN]'stat' => [
             'class' => 'elephantsGroup\stat\Module',
-        ], 
+        ],[STAT_CONFIG_END]*/
 		'user' => [
 			'class' => 'elephantsGroup\user\Module',
 			'enableWelcomMessage' => false,
 		],
-        'follow' => [
+        /*[FOLLOW_CONFIG_BEGIN]'follow' => [
             'class' => 'elephantsGroup\follow\Module',
-        ], 
-        'like' => [
+        ],[FOLLOW_CONFIG_END]*/ 
+        /*[LIKE_CONFIG_BEGIN]'like' => [
             'class' => 'elephantsGroup\like\Module',
-        ],
-        'star-rating' => [
+        ],[LIKE_CONFIG_END]*/
+        /*[STAR_RATING_CONFIG_BEGIN]'star-rating' => [
             'class' => 'elephantsGroup\starRating\Module',
-        ],
-        'comment' => [
+        ],[STAR_RATING_CONFIG_END]*/
+        /*[COMMENT_CONFIG_BEGIN]'comment' => [
             'class' => 'elephantsGroup\comment\Module',
-        ],
-        'contact' => [
+        ],[COMMENT_CONFIG_END]*/
+        /*[CONTACT_CONFIG_BEGIN]'contact' => [
             'class' => 'elephantsGroup\contact\Module',
-        ],
-        'blog' => [
+        ],[CONTACT_CONFIG_END]*/
+        /*[BLOG_CONFIG_BEGIN]'blog' => [
             'class' => 'elephantsGroup\blog\Module',
-        ],
-        'event' => [
+        ],[BLOG_CONFIG_END]*/
+        /*[EVENT_CONFIG_BEGIN]'event' => [
             'class' => 'elephantsGroup\event\Module',
-        ],
-        'news' => [
+        ],[EVENT_CONFIG_END]*/
+        /*[NEWS_CONFIG_BEGIN]'news' => [
             'class' => 'elephantsGroup\news\Module',
-        ],
-        'gallery' => [
+        ],[NEWS_CONFIG_END]*/
+        /*[GALLERY_CONFIG_BEGIN]'gallery' => [
             'class' => 'elephantsGroup\gallery\Module',
-        ],
-        'owl-slider' => [
+        ],[GALLERY_CONFIG_END]*/
+        /*[OWL_SLIDER_CONFIG_BEGIN]'owl-slider' => [
             'class' => 'elephantsGroup\owlSlider\Module',
-        ],
+        ],[OWL_SLIDER_CONFIG_END]*/
 	],
 ];
