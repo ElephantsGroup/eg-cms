@@ -93,5 +93,13 @@ return [
         /*[OWL_SLIDER_CONFIG_BEGIN]'owl-slider' => [
             'class' => 'elephantsGroup\owlSlider\Module',
         ],[OWL_SLIDER_CONFIG_END]*/
+	    /*[SERVICE_RELATION_CONFIG_BEGIN]'service-relation' => [
+            'class' => 'elephantsGroup\serviceRelation\Module',
+            'services' => [
+                1 => 'News',
+                2 => 'Event',
+                3 => 'Blog',
+            ],
+        ],[SERVICE_RELATION_CONFIG_END]*/
 	],
 ];

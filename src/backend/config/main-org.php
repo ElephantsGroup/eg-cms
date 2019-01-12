@@ -51,10 +51,6 @@ return [
        /*[SERVICE_RELATION_CONFIG_BEGIN]'service-relation' => [
             'class' => 'elephantsGroup\serviceRelation\Module',
             'layout' => '//sb-admin',
-            'services' => [
-                1 => 'News',
-                2 => 'Events',
-            ],
         ],[SERVICE_RELATION_CONFIG_END]*/
         /*[FOLLOW_CONFIG_BEGIN]'follow' => [
             'layout' => '//sb-admin',
