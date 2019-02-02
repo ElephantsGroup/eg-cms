@@ -69,6 +69,7 @@ return [
             1 => 'Events',
             2 => 'News',
             3 => 'Blog',
+			],
         ],[SERVICE_RELATION_CONFIG_END]*/
         /*[FOLLOW_CONFIG_BEGIN]'follow' => [
             'class' => 'elephantsGroup\follow\Module',
