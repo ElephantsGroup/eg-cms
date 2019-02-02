@@ -48,10 +48,6 @@ return [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\user\filters\BackendFilter',
         ],
-       /*[SERVICE_RELATION_CONFIG_BEGIN]'service-relation' => [
-            'class' => 'elephantsGroup\serviceRelation\Module',
-            'layout' => '//sb-admin',
-        ],[SERVICE_RELATION_CONFIG_END]*/
         /*[FOLLOW_CONFIG_BEGIN]'follow' => [
             'layout' => '//sb-admin',
             'as backend' => 'elephantsGroup\follow\filters\BackendFilter',

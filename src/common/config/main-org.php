@@ -63,9 +63,16 @@ return [
 			'class' => 'elephantsGroup\user\Module',
 			'enableWelcomMessage' => false,
 		],
+      /*[SERVICE_RELATION_CONFIG_BEGIN]'service-relation' => [
+        'class' => 'elephantsGroup\serviceRelation\Module',
+        'services' => [
+            1 => 'Events',
+            2 => 'News',
+            3 => 'Blog',
+        ],[SERVICE_RELATION_CONFIG_END]*/
         /*[FOLLOW_CONFIG_BEGIN]'follow' => [
             'class' => 'elephantsGroup\follow\Module',
-        ],[FOLLOW_CONFIG_END]*/ 
+        ],[FOLLOW_CONFIG_END]*/
         /*[LIKE_CONFIG_BEGIN]'like' => [
             'class' => 'elephantsGroup\like\Module',
         ],[LIKE_CONFIG_END]*/
@@ -80,12 +87,14 @@ return [
         ],[CONTACT_CONFIG_END]*/
         /*[BLOG_CONFIG_BEGIN]'blog' => [
             'class' => 'elephantsGroup\blog\Module',
+            'enabled_comment' => true,
         ],[BLOG_CONFIG_END]*/
         /*[EVENT_CONFIG_BEGIN]'event' => [
             'class' => 'elephantsGroup\event\Module',
         ],[EVENT_CONFIG_END]*/
         /*[NEWS_CONFIG_BEGIN]'news' => [
             'class' => 'elephantsGroup\news\Module',
+            'enabled_comment' => true,
         ],[NEWS_CONFIG_END]*/
         /*[GALLERY_CONFIG_BEGIN]'gallery' => [
             'class' => 'elephantsGroup\gallery\Module',
@@ -93,13 +102,5 @@ return [
         /*[OWL_SLIDER_CONFIG_BEGIN]'owl-slider' => [
             'class' => 'elephantsGroup\owlSlider\Module',
         ],[OWL_SLIDER_CONFIG_END]*/
-	    /*[SERVICE_RELATION_CONFIG_BEGIN]'service-relation' => [
-            'class' => 'elephantsGroup\serviceRelation\Module',
-            'services' => [
-                1 => 'News',
-                2 => 'Event',
-                3 => 'Blog',
-            ],
-        ],[SERVICE_RELATION_CONFIG_END]*/
 	],
 ];

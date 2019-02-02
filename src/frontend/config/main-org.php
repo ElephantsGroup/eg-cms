@@ -76,13 +76,16 @@ return [
         'class' => 'elephantsGroup\admin\components\AccessControl',
         'allowActions' => [
             'site/*',
+            'user/settings/*',
+            'user/profile/*',
             'user/security/login',
-			'user/security/register',
+            'user/security/register',
+            'user/registration/*',
             'user/security/logout',
-			/*[FOLLOW_CONFIG_BEGIN]'follow/ajax/*',[FOLLOW_CONFIG_END]*/
-			/*[LIKE_CONFIG_BEGIN]'like/ajax/*',[LIKE_CONFIG_END]*/
-			/*[STAR_RATING_CONFIG_BEGIN]'star-rating/ajax/*',[STAR_RATING_CONFIG_END]*/
-			/*[COMMENT_CONFIG_BEGIN]'comment/ajax/*',[COMMENT_CONFIG_END]*/
+      			/*[FOLLOW_CONFIG_BEGIN]'follow/ajax/*',[FOLLOW_CONFIG_END]*/
+      			/*[LIKE_CONFIG_BEGIN]'like/ajax/*',[LIKE_CONFIG_END]*/
+      			/*[STAR_RATING_CONFIG_BEGIN]'star-rating/ajax/*',[STAR_RATING_CONFIG_END]*/
+      			/*[COMMENT_CONFIG_BEGIN]'comment/ajax/*',[COMMENT_CONFIG_END]*/
             /*[BLOG_CONFIG_BEGIN]'blog/*',[BLOG_CONFIG_END]*/
             /*[EVENT_CONFIG_BEGIN]'event/*',[EVENT_CONFIG_END]*/
             /*[NEWS_CONFIG_BEGIN]'news/*',[NEWS_CONFIG_END]*/
